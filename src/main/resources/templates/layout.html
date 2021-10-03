@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--/* layoutを使うための定義もしておく */-->
+<html lang="ja" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<!--/* Modelに渡した値はどのhtmlでも参照可能 */-->
+<title th:text="${title}">タイトル</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<!--/* ヘッダーを別ファイルから読み込み */-->
+		<div id="header" th:include="header::header">ヘッダー</div>
+		<main>
+			<!--/* 本文は別ファイルから埋め込む */-->
+			<th:block layout:fragment="contents"></th:block>
+		</main>
+		<!--/* フッターを別ファイルから読み込み */-->
+		<div id="footer" th:replace="footer::footer">フッター</div>
+	</div>
+</body>
+</html>

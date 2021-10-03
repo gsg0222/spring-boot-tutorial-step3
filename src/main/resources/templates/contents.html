@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<!--/* layout:decorateで埋め込み先を定義 */-->
+<html lang="ja" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layout">
+<head>
+<meta charset="UTF-8">
+<title>コンテンツ</title>
+</head>
+<body>
+	<!--/* layoutに埋め込む部分を定義 */-->
+	<div layout:fragment="contents">
+		<!--/* Modelに渡した値はどのhtmlでも参照可能 */-->
+		<h1 th:text="${title}">ダミー</h1>
+		<p>コンテンツ</p>
+	</div>
+</body>
+</html>

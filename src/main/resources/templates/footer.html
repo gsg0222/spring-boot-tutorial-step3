@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!--/* th:fragmentで別ファイルから読み込めるようにする */-->
+	<footer class="text-center my-2 bg-dark text-light"
+		th:fragment="footer">
+		Copyright 2021
+		<!--/* Modelに渡した値はどのhtmlでも参照可能 */-->
+		<span th:text="${title}">ダミー</span>
+	</footer>
+
+</body>
+</html>
