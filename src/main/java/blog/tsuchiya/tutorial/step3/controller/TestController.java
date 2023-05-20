@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class TestController {
 
-	@GetMapping
+	@GetMapping("/")
 	public String index(Model model) {
 		model.addAttribute("title", "コンテンツページ");
 		return "contents";

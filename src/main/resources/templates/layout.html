@@ -13,13 +13,13 @@
 <body>
 	<div class="container">
 		<!--/* ヘッダーを別ファイルから読み込み */-->
-		<div id="header" th:include="header::header">ヘッダー</div>
+		<div id="header" th:insert="~{header::header}">ヘッダー</div>
 		<main>
 			<!--/* 本文は別ファイルから埋め込む */-->
 			<th:block layout:fragment="contents"></th:block>
 		</main>
 		<!--/* フッターを別ファイルから読み込み */-->
-		<div id="footer" th:replace="footer::footer">フッター</div>
+		<div id="footer" th:replace="~{footer::footer}">フッター</div>
 	</div>
 </body>
 </html>
